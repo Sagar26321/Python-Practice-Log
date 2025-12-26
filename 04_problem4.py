@@ -1,4 +1,9 @@
-name = "harry is a good  boy and "
+word = "Donkey"
 
-print(name.replace("  ", " "))
-print(name) # Strings are immutable which means that you cannot change them by running functions on them
+with open("file.txt", "r") as f:
+    content = f.read()
+
+contentNew = content.replace(word,"#######")
+
+with open("file.txt", "w") as f:
+    f.write(contentNew)

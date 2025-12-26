@@ -1,4 +1,8 @@
-name = input("Enter your  name:")
+f = open("poem.txt")
+content = f.read()
+if ("Twinkle" in content):
+    print("The word Twinkle is present in the content.")
+else:
+    print("Not Here")
 
-print(f"Good Afternoon, {name} ")
-
+f.close()

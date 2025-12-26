@@ -1,5 +1,22 @@
-letter = '''  Dear <|Name|>, 
-You are selected!
-<|date|> '''
- 
-print(letter.replace("<|Name|>","Sagar").replace("<|date|", "26 November 2078"))
+import random
+
+def game():
+    print("You are playing the game...")
+    score = random.randint(1,63)
+
+    # Fetch the hiscore
+    with open("hiscore.txt") as f:
+        hiscore = f.read()
+        if (hiscore != ""):
+            hiscore = int(hiscore)
+        else: 
+            hiscore = 0
+
+    print(f"your score is: {score}")
+    if(score>hiscore):
+        # write this hiscore to the file
+        with open("hiscore.txt", "w") as f:
+            f.write(str(score))
+
+    return score
+game()
