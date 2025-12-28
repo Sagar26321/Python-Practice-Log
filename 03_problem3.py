@@ -1,10 +1,9 @@
-def generateTable(n):
-    table = ""
-    for i in range(1, 11):
-        table += f"{n} X {i} = {n*i}\n"
+class demo:
+    a = 4
 
-    with open(f"tables/table_{n}.txt", "w") as f:
-        f.write(table)
+o = demo()
+print(o.a) # prints the class attribute because instance attribute is not present
 
-for i in range(2,21):
-    generateTable(i) 
+o.a = 0 # instance attribute is set
+print(o.a) # prints the instance attribute because instance attribute is present
+print(demo.a) # prints the class attribute 
