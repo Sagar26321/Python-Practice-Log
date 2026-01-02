@@ -1,16 +1,13 @@
-class calculator:
-    def __init__(self,n):
-        self.n = n
+class Animals:
+    pass
 
-    def square(self):
-        print(f"The square is {self.n*self.n}")
-    def cube(self):
-        print(f"The cube is {self.n*self.n*self.n}")
-    def squareroot(self):
-        print(f"The square root is {self.n**0.5}")
+class Pets(Animals):
+    pass
 
-a = calculator(9)
-a.square()
-a.cube()
-a.squareroot()
-        
+class Dogs(Pets):
+    @staticmethod
+    def bark():
+        print("Woof Woof!")
+
+dog = Dogs()
+dog.bark()

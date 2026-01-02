@@ -1,21 +1,14 @@
-class calculator:
-    def __init__(self,n):
-        self.n = n
+class Complex:
+    def __init__(self, r, i):
+        self.r = r
+        self.i = i
 
-    def square(self):
-        print(f"The square is {self.n*self.n}")
-    def cube(self):
-        print(f"The cube is {self.n*self.n*self.n}")
-    def squareroot(self):
-        print(f"The square root is {self.n**0.5}")
+    def __add__(self, c2):
+        return Complex(self.r + c2.r, self.i + c2.i)
 
-    @staticmethod
-    def greet():
-        print("Hello! Welcome to the calculator program.")
-
-a = calculator(9)
-a.greet()
-a.square()
-a.cube()
-a.squareroot()
-        
+    def __str__(self):
+        return f"{self.r} + {self.i}i"
+    
+c1 = Complex(2, 3)
+c2 = Complex(4, 5)
+print(c1 + c2)
