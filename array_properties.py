@@ -1,0 +1,8 @@
+import numpy as np
+# NUMPY Properties:-
+arr = np.array([[1,2,3],
+[4,5,6]])
+print("Shape:", arr.shape)
+print("Dimension:", arr.ndim)
+print("Size:", arr.size)
+print("Datatype:", arr.dtype)
